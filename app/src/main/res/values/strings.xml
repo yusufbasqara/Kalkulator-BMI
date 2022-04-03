@@ -15,4 +15,5 @@
     <string name="lebar_invalid">Lebar belum diisi</string>
     <string name="tinggi_invalid">Tinggi belum diisi</string>
     <string name="jenisBangun_invalid">Jenis Ruang Belum Dipilih</string>
+    <string name="reset">Reset</string>
 </resources>

@@ -19,6 +19,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.button.setOnClickListener { hitungLuas() }
+        binding.button2.setOnClickListener { reset() }
+
+    }
+
+    private fun reset() {
+        binding.editTextNumber.text.clear()
+        binding.editTextNumber2.text.clear()
+        binding.editTextNumber3.text.clear()
+        binding.radioGroup.clearCheck()
+        binding.hasilLuas.text = getString(R.string.luas_bangun)
 
     }
 
