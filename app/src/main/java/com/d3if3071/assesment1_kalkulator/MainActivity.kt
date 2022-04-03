@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
 
         val selectedId = binding.radioGroup.checkedRadioButtonId
 
-        if (selectedId == 2131230955 || selectedId == 2131230807) {
+        if (selectedId == 2131230956 || selectedId == 2131230807) {
             if (TextUtils.isEmpty(tinggi)) {
                 Toast.makeText(this, R.string.tinggi_invalid, Toast.LENGTH_SHORT).show()
             }
@@ -60,19 +60,12 @@ class MainActivity : AppCompatActivity() {
                 val hasilBangunRuang =
                     (panjang.toDouble() * lebar.toDouble() * tinggi.toDouble())
                 binding.hasilLuas.text = hasilBangunRuang.toString()
-                Toast.makeText(this, "3 parameter", Toast.LENGTH_LONG).show()
-                return
             }
         } else {
-            Toast.makeText(this, "2 parameter", Toast.LENGTH_LONG).show()
             val hasilBangunDatar = panjang.toDouble() * lebar.toDouble()
             binding.hasilLuas.text = hasilBangunDatar.toString()
-            return
-
         }
 
-        Log.d("check radio", "${selectedId}")
-
-
+        Log.d("check id", selectedId.toString())
     }
 }
