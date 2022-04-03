@@ -1,3 +1,5 @@
 <resources>
-
+    <string name="app_name">Assesment1_kalkulator</string>
+    <string name="kalkulatorVolume">Kalkulator Volume Bangun Ruang</string>
+    <string name="kalkulatorIntro">"Kalkulator bangun ruang ini digunakan untuk menghitung setiap bangun ruang yang berbeda-beda sehingga setiap bangun ruang yang berbeda bisa dihitung secara otomatis. Berikut input ukuran yang ingin dihitung : "</string>
 </resources>
