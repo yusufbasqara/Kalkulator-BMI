@@ -10,4 +10,9 @@
     <string name="persegi_panjang">Persegi Panjang</string>
     <string name="balok">Balok</string>
     <string name="kubik">Kubik</string>
+    <string name="luas_bangun">Luas Bangun :</string>
+    <string name="panjang_invalid">Panjang Belum Diisi</string>
+    <string name="lebar_invalid">Lebar belum diisi</string>
+    <string name="tinggi_invalid">Tinggi belum diisi</string>
+    <string name="jenisBangun_invalid">Jenis Ruang Belum Dipilih</string>
 </resources>
