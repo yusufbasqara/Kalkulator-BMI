@@ -2,4 +2,12 @@
     <string name="app_name">Assesment1_kalkulator</string>
     <string name="kalkulatorVolume">Kalkulator Volume Bangun Ruang</string>
     <string name="kalkulatorIntro">"Kalkulator bangun ruang ini digunakan untuk menghitung setiap bangun ruang yang berbeda-beda sehingga setiap bangun ruang yang berbeda bisa dihitung secara otomatis. Berikut input ukuran yang ingin dihitung : "</string>
+    <string name="panjangBangun">Panjang</string>
+    <string name="lebarBangun">Lebar</string>
+    <string name="tinggiBangun">Tinggi</string>
+    <string name="jenisBangun">Jenis Bangun Ruang : </string>
+    <string name="hitung">Hitung Luas</string>
+    <string name="persegi_panjang">Persegi Panjang</string>
+    <string name="balok">Balok</string>
+    <string name="kubik">Kubik</string>
 </resources>
