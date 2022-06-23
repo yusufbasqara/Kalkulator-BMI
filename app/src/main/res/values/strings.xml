@@ -2,4 +2,6 @@
     <string name="app_name">Galeri Hewan</string>
     <string name="namaTextView">Angsa</string>
     <string name="latinTextView">Cygnus Olor</string>
+    <string name="message">%1$s diklik!</string>
+    <string name="jenisTextView">Jenis Hewan</string>
 </resources>

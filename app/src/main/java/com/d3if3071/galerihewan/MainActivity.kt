@@ -24,16 +24,16 @@ class MainActivity : AppCompatActivity() {
 
     private fun getData(): List<Hewan> {
         return listOf(
-            Hewan("Angsa", "Cygnus olor", R.drawable.angsa),
-            Hewan("Ayam", "Gallus gallus", R.drawable.ayam),
-            Hewan("Bebek", "Cairina moschata", R.drawable.bebek),
-            Hewan("Domba", "Ovis ammon", R.drawable.domba),
-            Hewan("Kalkun", "Meleagris gallopavo", R.drawable.kalkun),
-            Hewan("Kambing", "Capricornis sumatrensis", R.drawable.kambing),
-            Hewan("Kelinci", "Oryctolagus cuniculus", R.drawable.kelinci),
-            Hewan("Kerbau", "Bubalus bubalis", R.drawable.kerbau),
-            Hewan("Kuda", "Equus caballus", R.drawable.kuda),
-            Hewan("Sapi", "Bos taurus", R.drawable.sapi),
+            Hewan("Angsa", "Cygnus olor", R.drawable.angsa, "Unggas"),
+            Hewan("Ayam", "Gallus gallus", R.drawable.ayam, "Unggas"),
+            Hewan("Bebek", "Cairina moschata", R.drawable.bebek, "Unggas"),
+            Hewan("Domba", "Ovis ammon", R.drawable.domba,"Mamalia"),
+            Hewan("Kalkun", "Meleagris gallopavo", R.drawable.kalkun, "Unggas"),
+            Hewan("Kambing", "Capricornis sumatrensis", R.drawable.kambing, "Mamalia"),
+            Hewan("Kelinci", "Oryctolagus cuniculus", R.drawable.kelinci, "Mamalia"),
+            Hewan("Kerbau", "Bubalus bubalis", R.drawable.kerbau, "Mamalia"),
+            Hewan("Kuda", "Equus caballus", R.drawable.kuda, "Mamalia"),
+            Hewan("Sapi", "Bos taurus", R.drawable.sapi, "Mamalia"),
         )
     }
 }
