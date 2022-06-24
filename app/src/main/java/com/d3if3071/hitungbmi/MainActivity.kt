@@ -24,8 +24,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun resetBmi() {
-        binding.tinggiBadanInp.text.clear();
-        binding.beratBadanInp.text.clear()
+        binding.tinggiBadanInp.text?.clear();
+        binding.beratBadanInp.text?.clear()
         binding.radioGroup.clearCheck()
         binding.bmiTextView.text = getString(R.string.bmi_x)
         binding.kategoriTextView.text = getString(R.string.kategori_x)
