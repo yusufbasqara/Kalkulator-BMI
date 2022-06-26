@@ -1,4 +1,4 @@
-package com.d3if3071.hitungbmi
+package com.d3if3071.hitungbmi.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
