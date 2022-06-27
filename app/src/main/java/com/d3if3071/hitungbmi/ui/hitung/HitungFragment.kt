@@ -1,26 +1,22 @@
-package com.d3if3071.hitungbmi.ui
+package com.d3if3071.hitungbmi.ui.hitung
 
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
 import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.Navigation.findNavController
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.d3if3071.hitungbmi.R
 import com.d3if3071.hitungbmi.databinding.FragmentHitungBinding
+import com.d3if3071.hitungbmi.db.BmiDb
 import com.d3if3071.hitungbmi.model.HasilBmi
 import com.d3if3071.hitungbmi.model.KategoriBmi
 
 class HitungFragment : Fragment() {
     private lateinit var binding: FragmentHitungBinding
-
-    private val viewModel: MainViewModel by lazy {
-        ViewModelProvider(requireActivity())[MainViewModel::class.java]
-    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentHitungBinding.inflate(layoutInflater, container, false)
@@ -36,9 +32,18 @@ class HitungFragment : Fragment() {
 
         viewModel.getHasilBmi().observe(requireActivity(), { showResult(it) })
 
-        viewModel.getNavigasi().observe(viewLifecycleOwner, {if (it == null) return@observe
-        findNavController().navigate(HitungFragmentDirections.actionHitungFragmentToSaranFragment(it))
-        viewModel.selesaiNavigasi()})
+        viewModel.getNavigasi().observe(viewLifecycleOwner, {
+            if (it == null) return@observe
+            findNavController().navigate(HitungFragmentDirections
+                .actionHitungFragmentToSaranFragment(it))
+            viewModel.selesaiNavigasi()
+        })
+
+        viewModel.data.observe(viewLifecycleOwner, {
+            if (it == null) return@observe
+            Log.d("HitungFragment", "Data tersimpan. ID = ${it.id}")
+        })
+
     }
 
     private fun hitungBmi() {
@@ -65,13 +70,6 @@ class HitungFragment : Fragment() {
             tinggi.toFloat(),
             selectedId == R.id.priaRadioButton
         )
-    }
-
-    private fun hitungBmi(berat: Float, tinggi: Float, isMale: Boolean): HasilBmi {
-        val tinggiCm = tinggi / 100
-        val bmi = berat / (tinggiCm * tinggiCm)
-        val kategori = getKategori(bmi, isMale)
-        return HasilBmi(bmi, kategori)
     }
 
     private fun showResult(result: HasilBmi?) {
@@ -139,6 +137,12 @@ class HitungFragment : Fragment() {
                 requireActivity().packageManager) != null) {
             startActivity(shareIntent)
         }
+    }
+
+    private val viewModel: HitungViewModel by lazy {
+        val db = BmiDb.getInstance(requireContext())
+        val factory = HitungViewModelFactory(db.dao)
+        ViewModelProvider(this, factory)[HitungViewModel::class.java]
     }
 
 
