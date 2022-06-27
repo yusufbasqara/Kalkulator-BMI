@@ -24,6 +24,17 @@ class HistoriFragment : Fragment() {
     private lateinit var binding: FragmentHistoryBinding
     private lateinit var myAdapter: HistoriAdapter
 
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        binding = FragmentHistoryBinding.inflate(layoutInflater,
+            container, false)
+        setHasOptionsMenu(true)
+        return binding.root
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         myAdapter = HistoriAdapter()
         with(binding.recyclerView) {
@@ -32,11 +43,11 @@ class HistoriFragment : Fragment() {
             setHasFixedSize(true)
         }
 
-        viewModel.data.observe(viewLifecycleOwner, {
+        viewModel.data.observe(viewLifecycleOwner) {
             Log.d("Histori Fragment", "Jumlah data: ${it.size}")
             binding.emptyView.visibility = if (it.isEmpty())
                 View.VISIBLE else View.GONE
             myAdapter.submitList(it)
-            })
         }
+    }
 }
