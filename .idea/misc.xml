@@ -4,8 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/hitungbmi2/app/src/main/res/layout/activity_main.xml" value="0.10677083333333333" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/hitungbmi2/app/src/main/res/layout/fragment_about.xml" value="0.1" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/hitungbmi2/app/src/main/res/layout/fragment_hitung.xml" value="0.10677083333333333" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/hitungbmi2/app/src/main/res/layout/fragment_saran.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/hitungbmi2/app/src/main/res/menu/options_menu.xml" value="0.184375" />
       </map>
     </option>
   </component>

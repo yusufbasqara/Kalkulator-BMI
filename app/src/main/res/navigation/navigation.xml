@@ -13,6 +13,10 @@
         <action
             android:id="@+id/action_hitungFragment_to_saranFragment"
             app:destination="@id/saranFragment" />
+        <action
+            android:id="@+id/action_hitungFragment_to_aboutFragment2"
+            app:destination="@id/aboutFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/saranFragment"
@@ -22,5 +26,10 @@
             android:name="kategori"
             app:argType="com.d3if3071.hitungbmi.model.KategoriBmi" />
     </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.d3if3071.hitungbmi.AboutFragment"
+        android:label="@string/tentang_aplikasi"
+        tools:layout="@layout/fragment_about"/>
 
 </navigation>
