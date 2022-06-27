@@ -17,6 +17,10 @@
     <fragment
         android:id="@+id/saranFragment"
         android:name="com.d3if3071.hitungbmi.ui.SaranFragment"
-        tools:layout="@layout/fragment_saran"/>
+        tools:layout="@layout/fragment_saran">
+        <argument
+            android:name="kategori"
+            app:argType="com.d3if3071.hitungbmi.model.KategoriBmi" />
+    </fragment>
 
 </navigation>

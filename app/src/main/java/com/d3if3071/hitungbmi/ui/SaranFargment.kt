@@ -6,12 +6,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.navArgs
 import com.d3if3071.hitungbmi.R
 import com.d3if3071.hitungbmi.databinding.FragmentSaranBinding
 import com.d3if3071.hitungbmi.model.KategoriBmi
 
 class SaranFragment : Fragment() {
     private lateinit var binding: FragmentSaranBinding
+    private val args: SaranFragmentArgs by navArgs()
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
         binding = FragmentSaranBinding.inflate(layoutInflater, container, false)
@@ -38,7 +41,8 @@ class SaranFragment : Fragment() {
         }
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        updateUI(KategoriBmi.KURUS)
+        updateUI(args.kategori)
+
     }
 }
 
