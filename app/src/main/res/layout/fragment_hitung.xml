@@ -118,15 +118,6 @@
        app:layout_constraintStart_toStartOf="@id/radioGroup"
         app:layout_constraintTop_toBottomOf="@id/radioGroup"/>
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/resetButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/button"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup"/>
-
             <View
         android:id ="@+id/divider"
         android:layout_width="match_parent"

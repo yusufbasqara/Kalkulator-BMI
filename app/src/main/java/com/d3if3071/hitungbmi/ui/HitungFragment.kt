@@ -41,14 +41,6 @@ class HitungFragment : Fragment() {
         viewModel.selesaiNavigasi()})
     }
 
-    private fun resetBmi() {
-        binding.tinggiEditText.text.clear()
-        binding.beratEditText.text.clear()
-        binding.radioGroup.clearCheck()
-        binding.bmiTextView.text = getString(R.string.bmi_x)
-        binding.kategoriTextView.text = getString(R.string.kategori_x)
-    }
-
     private fun hitungBmi() {
         val berat = binding.beratEditText.text.toString()
         if (TextUtils.isEmpty(berat)) {
